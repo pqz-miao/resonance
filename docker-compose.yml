@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:17.9
+    restart: always
+    volumes:
+      - ./database/db:/var/lib/postgresql/data
+    ports:
+      - 5439:5432
+
+    environment:
+      - POSTGRES_DB=resonance
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
