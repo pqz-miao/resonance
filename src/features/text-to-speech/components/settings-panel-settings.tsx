@@ -8,6 +8,7 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { useTypedAppFormContext } from "@/hooks/use-app-form";
 
 import { sliders } from "../data/sliders";
+import { VoiceSelector } from "./voice-selector";
 import { ttsFormOptions } from "./text-to-speech-form";
 
 export const SettingsPanelSettings = () => {
@@ -18,9 +19,7 @@ export const SettingsPanelSettings = () => {
     <>
       {/* Voice Style Dropdown Section */}
       <div className="border-b border-dashed p-4">
-        <p className="text-sm text-muted-foreground">
-          Voice selector coming soon
-        </p>
+        <VoiceSelector />
       </div>
       {/* Voice Adjustments Section */}
       <div className="p-4 flex-1">
