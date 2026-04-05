@@ -107,7 +107,7 @@ export const voicesRouter = createTRPCRouter({
 
       if (voice.r2ObjectKey) {
         // In production, consider background jobs, retries, cron jobs etc.
-        await deleteAudio(voice.r2ObjectKey).catch((e) => {});
+        await deleteAudio(voice.r2ObjectKey).catch(() => {});
       }
 
       return { success: true };
