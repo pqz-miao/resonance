@@ -1,8 +1,10 @@
 import { voicesRouter } from "./voices";
 import { createTRPCRouter } from "../init";
+import { generationsRouter } from "./generations";
 
 export const appRouter = createTRPCRouter({
   voices: voicesRouter,
+  generations: generationsRouter,
 });
 
 // export type definition of API
